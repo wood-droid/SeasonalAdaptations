@@ -9,9 +9,9 @@
         #game-container { display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
         #image-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
         .draggable { cursor: grab; margin: 5px; border-radius: 10px; }
-        .drop-zone { width: 150px; height: 100px; background: rgba(255,255,255,0.8); border: 2px dashed black; margin: 10px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+        .drop-zone { width: 284px; height: 186px; background: rgba(255,255,255,0.8); border: 2px dashed black; margin: 10px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
         #matching-area { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
-        .season-box { border: 2px solid black; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: space-around; width: 200px; height: 200px; border-radius: 10px; }
+        .season-box { border: 2px solid black; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: space-around; width: 284px; height: 372px; border-radius: 10px; }
         #Winter { background-color: lightblue; }
         #Spring { background-color: lightyellow; }
         #Summer { background-color: pink; }
@@ -78,7 +78,7 @@
                 event.preventDefault();
                 const data = JSON.parse(event.dataTransfer.getData('text/plain'));
                 if (zone.getAttribute('data-type') === data.type) {
-                    zone.innerHTML = `<img src="${data.label}" width="80">`;
+                    zone.innerHTML = `<img src="${data.label}" width="100">`;
                 }
             });
         });
